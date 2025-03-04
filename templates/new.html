@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+    <title>Car Price Prediction</title>
+    <script>
+        // JavaScript for mobile menu toggle
+        function toggleMenu() {
+            let menu = document.getElementById("nav-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header id="header">
+        <!-- Logo -->
+        <a href="https://aisite.10web.io/69/implicitly-vast-pigeon/">
+            <img src="https://aisite.10web.io/69/wp-content/uploads/sites/171/2025/03/logo_l5lbzDC2.webp" alt="Logo">
+        </a>
+
+        <!-- Mobile menu toggle button -->
+        <div class="twbb-menu-toggle" onclick="toggleMenu()">
+            ☰ <!-- Unicode for a simple hamburger menu -->
+        </div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul id="nav-menu" class="twbb-nav-menu">
+                <li><a href="https://aisite.10web.io/69/implicitly-vast-pigeon/about-us/">About Us</a></li>
+                <li><a href="https://aisite.10web.io/69/implicitly-vast-pigeon/how-it-works/">How It Works</a></li>
+                <li><a href="https://aisite.10web.io/69/implicitly-vast-pigeon/contact-us/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img fetchpriority="high"
+                src="https://aisite.10web.io/69/wp-content/uploads/sites/171/2025/03/tenweb_media_rag1gjrz0.webp"
+                alt="Sample Image" class="styled-image">
+        </div>
+
+        <div class="text-container">
+            <h1 class="twbb-headline twbb-headline-animation-type-clip">
+                <span class="twbb-headline-plain-text twbb-headline-text-wrapper">
+                    Unlock the True Value Of Your Car
+                </span>
+            </h1>
+            <div class="elementor-widget-container">
+                Welcome to CarPredict, your go-to destination for accurate car price predictions. Whether you’re buying,
+                selling, or simply curious, our advanced algorithms provide you with the insights you need to make
+                informed decisions. Get started today and experience the future of car valuation! </div>
+        </div>
+    </div>
+    </h1>
+    </div>
+    <!-- Car Model Feature Input Form -->
+    <section class="form-section">
+        <h2>Enter Car Details</h2>
+        <form action="/" method="POST" class="car-form">
+            <label>Car Symboling:</label>
+            <input type="number" name="symboling" required>
+
+            <label>Car Fuel Type:</label>
+            <select name="fueltype">
+                <option value="gas">Gas</option>
+                <option value="diesel">Diesel</option>
+            </select>
+
+            <label>Car Body:</label>
+            <select name="carbody">
+                <option value="convertible">Convertible</option>
+                <option value="hatchback">hatchback</option>
+                <option value="sedan">sedan</option>
+                <option value="wagon">wagon</option>
+                <option value="hardtop">hardtop</option>
+
+            </select>
+
+            <label>Drive Wheel :</label>
+            <select name="drivewheel">
+                <option value="rwd">RWD</option>
+                <option value="fwd">FWD</option>
+                <option value="4wd">4WD</option>
+            </select>
+
+            <label>Engine Type:</label>
+            <select name="enginetype" required>            
+                <option value="dohc">dohc</option>
+                <option value="ohcv">ohcv</option>
+                <option value="ohc">ohc</option>
+                <option value="l">l</option>
+                <option value="rotor">rotor</option>
+                <option value="ohcf">ohcf</option>
+                <option value="dohcv">dohcv</option>
+            </select>
+
+            <label>Cylinder Number:</label>
+            <select name="cylindernumber" required>
+                <option value="four">Four</option>
+                <option value="six">Six</option>
+                <option value="Five">Five</option>
+                <option value="three">Three</option>
+                <option value="twelve">Twelve</option>
+                <option value="two">Two</option>
+                <option value="eight">Eight</option>
+
+
+
+            </select>
+
+            <label>Horsepower:</label>
+            <input type="number" name="horsepower" required>
+            
+
+            <label>Stroke:</label>
+            <input type="number" name="stroke" min="2" max="4" required>
+
+            <label>Compression Ratio:</label>
+            <input type="number" name="compressionratio" min=9 max=23>
+            <button type="submit" class="submit-btn">Get Price Estimate</button>
+        </form>
+        {% if price_estimate %}
+        <p>Estimated Car Price: ₹{{ price_estimate }}</p>
+        {% endif %}
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Logo and About -->
+            <div class="footer-section">
+                <img src="https://aisite.10web.io/69/wp-content/uploads/sites/171/2025/03/logo_l5lbzDC2.webp"
+                    alt="CarPredict Logo" class="footer-logo">
+                <p>Your go-to destination for accurate car price predictions.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://aisite.10web.io/69/implicitly-vast-pigeon/about-us/">About Us</a></li>
+                    <li><a href="https://aisite.10web.io/69/implicitly-vast-pigeon/how-it-works/">How It Works</a></li>
+                    <li><a href="https://aisite.10web.io/69/implicitly-vast-pigeon/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@carpredict.com</p>
+                <p>Phone: +1 (234) 567-890</p>
+                <p>Address: 123 CarPredict St, Auto City, USA</p>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 CarPredict. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+</html>
