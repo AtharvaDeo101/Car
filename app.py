@@ -69,4 +69,7 @@ def home():
 
 # Run Flask app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
+
+
+#last point of the code 
